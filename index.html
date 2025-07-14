@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Card Insertion</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+      }
+      .container {
+        padding: 1em;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+      }
+      .card {
+        display: flex;
+        gap: 1em;
+      }
+      .image {
+        position: relative;
+      }
+      .duration {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.788);
+        bottom: 10px;
+        right: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 3px;
+      }
+      .title {
+        font-weight: bold;
+        margin-bottom: 1em;
+      }
+      .details span {
+        font-size: 15px;
+        color: rgb(218, 212, 212);
+      }
+      img {
+        border-radius: 10px;
+        width: 246px;
+        height: 138px;
+      }
+      .input-container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 300px;
+        row-gap: 10px;
+        margin: 20px 0px;
+        background-color: rgb(86, 82, 82);
+        width: 400px;
+        margin: 50px auto 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 20px;
+      }
+      input {
+        width: 300px;
+        padding: 10px;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+      }
+      .buttonContainer {
+        text-align: center;
+      }
+      .btn {
+        padding: 10px 30px;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgb(215, 25, 25);
+        color: white;
+      }
+      .input-container p {
+        text-align: center;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-container">
+      <p>You can see the sample card below</p>
+      <input type="text" id="videoTitle" placeholder="Enter Video Title" />
+      <input type="text" id="channelName" placeholder="Enter Channel Name" />
+      <input
+        type="text"
+        id="videoViews"
+        placeholder="Enter Video Views (Number)"
+      />
+      <input
+        type="text"
+        id="timeAgo"
+        placeholder="Enter who many time ago you uploaded this video"
+      />
+      <input
+        type="text"
+        id="videoDuration"
+        placeholder="Enter Video Duration"
+      />
+      <input type="text" id="thumbnailUrl" placeholder="Enter Thumbnail Url" />
+      <div class="buttonContainer">
+        <button class="btn" onclick="addCard();">Add</button>
+        <button class="btn" onclick="clearCards()">Remove</button>
+      </div>
+    </div>
+
+    <div class="container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
